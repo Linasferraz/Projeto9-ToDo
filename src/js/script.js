@@ -8,7 +8,7 @@ function validaCampo()
 {
     let valida=false;
     if(document.getElementById("task").value =="")
-    valida=
+    valida=true;
     return valida;
 }
 
@@ -30,4 +30,13 @@ function adicionarTarefa(){
     }
     // volte para o input da tarefa
     document.getElementById("task").focus();
+}
+
+// Função listar tarefas
+function listarTarefas(){
+    let valor="";
+    for(let i=0; i<tarefas.length;i++){
+        valor += tarefas[i] +"<br>";
+        document.getElementById("lista").innerHTML =valor;
+    }
 }
